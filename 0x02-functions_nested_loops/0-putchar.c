@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int str[] = {10, 100, 110, 111, 84, 104};
+	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
 	int count, sz;
 
 	sz = sizeof(str) / sizeof(int);
