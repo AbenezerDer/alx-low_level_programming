@@ -16,6 +16,7 @@ int numLength(int num)
 	{
 		return (1);
 	}
+
 	while (num)
 	{
 		num = num / 10;
@@ -55,6 +56,8 @@ int main(void)
 
 		if (i != 98)
 			printf(", ");
+		else
+			printf("\n");
 		i++;
 	}
 	return (0);
