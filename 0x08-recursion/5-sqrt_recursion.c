@@ -1,18 +1,29 @@
 #include "main.h"
 
-int find_sqrt(int num, int root);
-int _sqrt_recursion(int n);
+/**
+ * is_sqrt - helper function for _sqrt_recursion
+ * @n: input number
+ * @i: iteratotr
+ * Return: square root of number
+ */
+
+int is_sqrt(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (is_sqrt(n, i + 1));
+}
 
 /**
- * find_sqrt - Finds the natural square root of an inputted number.
- * @num: The number to find the square root of.
- * @root: The root to be tested.
- *
- * Return: If the number has a natural square root - the square root.
- * If the number does not have a natural square root - -1.
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: input number
+ * Return: square root of number, -1 if false
  */
-int find_sqrt(int num, int root)
+int _sqrt_recursion(int n)
 {
-	if ((root * root) == num)
-		return (root);
+	if (n < 0)
+		return (-1);
+	return (is_sqrt(n, 1));
 }
